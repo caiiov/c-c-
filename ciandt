@@ -1,0 +1,51 @@
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+int ultima_parada(int combustivel,int consumo,int* postos_de_gasolina[3]={2,11,15,22},size_t size, int d);
+int ultima_parada(int combustivel,int consumo,int* postos_de_gasolina[3]={2,11,15,22},size_t size, int d){   
+  
+  printf("Quanto de combustivel restante o carro possui?");
+  
+  scanf("%d",&combustivel);
+  printf("Qual o consumo do carro(km/l)?");
+  scanf("%d",&consumo);
+  d = combustivel*consumo;
+  if(d>postos_de_gasolina[0]){
+    printf("posto mais próximo está a 2km");
+    return d;
+  }
+
+
+  if(d>postos_de_gasolina[11]){
+    printf("posto mais próximo está a 11km");
+    return d;
+  }
+
+
+  if(d>postos_de_gasolina[15]){
+    
+    printf("posto mais próximo está a 15km");
+    return d;
+  }
+
+
+  if(d>postos_de_gasolina[22]){
+    printf("posto mais próximo está a 22km");
+    return d;
+  }
+
+  if(d<postos_de_gasolina[0]){
+    printf("Impossivel chegar a algum posto");
+    return -1;
+    
+}
+
+ 
+}
+
+int main(){
+  
+  
+ 
+  
+}
